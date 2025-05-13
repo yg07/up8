@@ -14,7 +14,7 @@ switch($_POST["oper"]) {
 
  case "add":
     $sql = "insert into journal (day, predmet_id, student_id, prepod_id, pres, mark) values ('
-            $day,$predmet,$student,$prepod,$present,$mark)";
+            $day',$predmet,$student,$prepod,$present,$mark)";
     if(!mysqli_query($db_handler, $sql)) {
         header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
         header('Content-Type: text/html; charset=utf-8');
